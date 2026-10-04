@@ -4,7 +4,7 @@ A web app to generate, customize, and download QR codes. It runs entirely in the
 
 Built for the **GDG on Campus SRM Recruitments 2026-27 (Technical Domain – Frontend Task 1)**.
 
-**Live demo:** LIVE-LINK-HERE
+**Live demo:** **Live demo:** https://qr-code-generator-beta-gilt.vercel.app
 
 ## Screenshots
 

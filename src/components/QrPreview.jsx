@@ -101,9 +101,9 @@ export default function QrPreview({ value, settings, warnings, fileName, onSave,
 
       <div className="stage">
         {value ? (
-          <div ref={containerRef} className="qr-canvas" aria-label="QR code preview" role="img" />
+          <div  key="qr" ref={containerRef} className="qr-canvas" aria-label="QR code preview" role="img" />
         ) : (
-          <div className="empty-stage">
+          <div  key="empty" className="empty-stage">
             <div className="ghost-qr" aria-hidden="true" />
             <p>Fill in the content to see your QR code.</p>
           </div>

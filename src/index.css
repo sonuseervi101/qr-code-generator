@@ -1,33 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+/* Colour tokens. Light is the default; dark applies when the device prefers it
+   (unless the user picked Light) or when the user picks Dark. */
 :root {
-  --bg: #ffffff;
-  --surface: #f6f8fb;
-  --text: #1f2937;
-  --muted: #5f6b7a;
-  --border: #d9dee5;
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-2: #f1f4f9;
+  --text: #111827;
+  --muted: #5b6475;
+  --border: #e3e7ef;
   --accent: #1a73e8;
-  --error: #c5221f;
-  --success: #188038;
-  --warn-bg: #fef7e0;
+  --accent-soft: #e8f0fe;
   --on-accent: #ffffff;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ok: #188038;
+  --ok-soft: #e6f4ea;
+  --warn: #8a5a00;
+  --warn-soft: #fef7e0;
+  --error: #c5221f;
+  --error-soft: #fce8e6;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 8px 24px rgba(16, 24, 40, 0.06);
+  --radius: 16px;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
   color: var(--text);
   background: var(--bg);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #15181d;
-    --surface: #1e232a;
+  :root:not([data-theme="light"]) {
+    --bg: #0e1117;
+    --surface: #161b22;
+    --surface-2: #1f2630;
     --text: #e8eaed;
     --muted: #9aa4b1;
-    --border: #343b45;
+    --border: #2a323d;
     --accent: #8ab4f8;
+    --accent-soft: #1d2c44;
+    --on-accent: #0e1117;
+    --ok: #81c995;
+    --ok-soft: #17301f;
+    --warn: #fdd663;
+    --warn-soft: #332a12;
     --error: #f28b82;
-    --success: #81c995;
-    --warn-bg: #3b3322;
-    --on-accent: #15181d;
+    --error-soft: #3a1d1b;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e1117;
+  --surface: #161b22;
+  --surface-2: #1f2630;
+  --text: #e8eaed;
+  --muted: #9aa4b1;
+  --border: #2a323d;
+  --accent: #8ab4f8;
+  --accent-soft: #1d2c44;
+  --on-accent: #0e1117;
+  --ok: #81c995;
+  --ok-soft: #17301f;
+  --warn: #fdd663;
+  --warn-soft: #332a12;
+  --error: #f28b82;
+  --error-soft: #3a1d1b;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
 }
 
 * {
@@ -36,4 +75,14 @@
 
 body {
   margin: 0;
+  background: var(--bg);
+  min-width: 320px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
 }
